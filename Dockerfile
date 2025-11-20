@@ -39,8 +39,8 @@ RUN apt-get update > /dev/null && \
             texlive-fonts-recommended \
             texlive-plain-generic > /dev/null
 
-COPY srv srv
-RUN cd srv && git clone https://github.com/mspass-team/mspass.git
+COPY ./srv ./srv
+RUN cd ./srv && git clone https://github.com/mspass-team/mspass.git
 
 USER ${NB_USER}
 WORKDIR /home/${NB_USER}
