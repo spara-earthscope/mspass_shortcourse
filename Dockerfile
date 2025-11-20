@@ -40,7 +40,7 @@ RUN apt-get update > /dev/null && \
             texlive-plain-generic > /dev/null
 
 #COPY ./srv ./srv
-RUN mkdir ../srv
+#RUN mkdir ../srv
 RUN cd ./srv && git clone https://github.com/mspass-team/mspass.git
 
 USER ${NB_USER}
